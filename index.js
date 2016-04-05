@@ -31,7 +31,7 @@ function assertEqual(actual, expected) {
 function factorsOf(number) {
   const factors = []
   if (number > 1) {
-    if (number % 2 === 0) {
+    while (number % 2 === 0) {
       factors.push(2)
       number = number / 2
     }
@@ -46,3 +46,7 @@ assertEqual(factorsOf(1), [])
 assertEqual(factorsOf(2), [2])
 assertEqual(factorsOf(3), [3])
 assertEqual(factorsOf(4), [2, 2])
+assertEqual(factorsOf(5), [5])
+assertEqual(factorsOf(6), [2, 3])
+assertEqual(factorsOf(7), [7])
+assertEqual(factorsOf(8), [2, 2, 2])

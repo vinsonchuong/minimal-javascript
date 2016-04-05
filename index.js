@@ -27,3 +27,9 @@ function assertEqual(actual, expected) {
 
   throw new Error(`Expected ${toString(actual)} to equal ${toString(expected)}`)
 }
+
+function factorsOf(number) {
+  return []
+}
+
+assertEqual(factorsOf(1), [])

@@ -31,6 +31,12 @@ function assertEqual(actual, expected) {
 function factorsOf(number) {
   const factors = []
   if (number > 1) {
+    if (number % 2 === 0) {
+      factors.push(2)
+      number = number / 2
+    }
+  }
+  if (number > 1) {
     factors.push(number)
   }
   return factors
@@ -39,3 +45,4 @@ function factorsOf(number) {
 assertEqual(factorsOf(1), [])
 assertEqual(factorsOf(2), [2])
 assertEqual(factorsOf(3), [3])
+assertEqual(factorsOf(4), [2, 2])

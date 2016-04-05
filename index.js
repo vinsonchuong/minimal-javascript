@@ -29,7 +29,12 @@ function assertEqual(actual, expected) {
 }
 
 function factorsOf(number) {
-  return []
+  const factors = []
+  if (number === 2) {
+    factors.push(2)
+  }
+  return factors
 }
 
 assertEqual(factorsOf(1), [])
+assertEqual(factorsOf(2), [2])

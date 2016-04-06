@@ -30,14 +30,13 @@ function assertEqual(actual, expected) {
 
 function factorsOf(number) {
   const factors = []
-  if (number > 1) {
-    while (number % 2 === 0) {
-      factors.push(2)
-      number = number / 2
+  let divisor = 2
+  while (divisor <= number) {
+    while (number % divisor === 0) {
+      factors.push(divisor)
+      number = number / divisor
     }
-  }
-  if (number > 1) {
-    factors.push(number)
+    divisor = divisor + 1
   }
   return factors
 }
@@ -50,3 +49,4 @@ assertEqual(factorsOf(5), [5])
 assertEqual(factorsOf(6), [2, 3])
 assertEqual(factorsOf(7), [7])
 assertEqual(factorsOf(8), [2, 2, 2])
+assertEqual(factorsOf(9), [3, 3])

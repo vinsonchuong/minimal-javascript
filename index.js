@@ -52,8 +52,9 @@ assertEqual(factorsOf(8), [2, 2, 2])
 assertEqual(factorsOf(9), [3, 3])
 assertEqual(factorsOf(2 * 5 * 5 * 7 * 11 * 23), [2, 5, 5, 7, 11, 23])
 
-function sort() {
-  return []
+function sort(array) {
+  return array
 }
 
 assertEqual(sort([]), [])
+assertEqual(sort([1]), [1])

@@ -51,21 +51,3 @@ assertEqual(factorsOf(7), [7])
 assertEqual(factorsOf(8), [2, 2, 2])
 assertEqual(factorsOf(9), [3, 3])
 assertEqual(factorsOf(2 * 5 * 5 * 7 * 11 * 23), [2, 5, 5, 7, 11, 23])
-
-function sort(array) {
-  if (array[0] > array[1]) {
-    return [array[1], array[0]].concat(array.slice(2))
-  }
-  if (array[1] > array[2]) {
-    return [array[0]].concat([array[2], array[1]])
-  }
-  return array
-}
-
-assertEqual(sort([]), [])
-assertEqual(sort([1]), [1])
-assertEqual(sort([1, 2]), [1, 2])
-assertEqual(sort([2, 1]), [1, 2])
-assertEqual(sort([1, 2, 3]), [1, 2, 3])
-assertEqual(sort([2, 1, 3]), [1, 2, 3])
-assertEqual(sort([1, 3, 2]), [1, 2, 3])

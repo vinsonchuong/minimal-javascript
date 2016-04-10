@@ -1,6 +1,9 @@
 {
   "name": "minimal-javascript",
   "private": true,
+  "scripts": {
+    "start": "babel --presets es2015,stage-0 --plugins transform-runtime --out-dir dist src && node dist/index.js"
+  },
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-plugin-transform-runtime": "^6.7.5",
